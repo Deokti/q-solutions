@@ -202,6 +202,7 @@
 
   .activeMenu {
     .menuList {
+      transition: .2s ease-in;
       pointer-events: none;
 
       opacity: 0;
@@ -214,7 +215,7 @@
     .menuList {
       pointer-events: all;
 
-      opacity: 1;
+      opacity: 5;
     }
   }
 }

@@ -61,6 +61,7 @@ export const MainLayout = (props: MainLayoutProps) => {
               <li
                 className={s.menuItem}
                 key={id}
+                onClick={handleHamburgerActivate}
               >
                 <Link
                   to={to}
