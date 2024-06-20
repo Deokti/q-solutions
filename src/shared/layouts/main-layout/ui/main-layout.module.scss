@@ -3,40 +3,90 @@
   grid-template-columns: var(--sidebar-width) 1.5fr 1fr;
   grid-template-rows: 0.1fr 2fr 1fr;
   gap: 0 0;
+
+  transition: .2s ease-in;
+
   grid-template-areas:
     "sidebar children children"
     "sidebar children children"
     "sidebar children children";
 }
 
+.closedMenu {
+  grid-template-columns: var(--sidebar-width-closed) 1.5fr 1fr;
+
+  .header {
+    justify-content: center;
+
+    padding: 0 15px;
+  }
+
+  .sidebar {
+    min-width: var(--sidebar-width-closed);
+  }
+
+  .button {
+    transform: rotateY(190deg);
+  }
+
+  .title {
+    position: absolute;
+
+    transform: translateX(-100%) scale(0);
+
+    opacity: 0;
+  }
+
+  .menuLink {
+    justify-content: center;
+
+    span {
+      position: absolute;
+
+      transform: translateX(100%) scale(0);
+    }
+  }
+}
+
 .sidebar {
   position: fixed;
-  grid-area: sidebar;
 
   min-width: var(--sidebar-width);
   height: 100%;
 
   padding: 24px 0;
 
+  transition: .2s ease-in;
+
   background-color: #181F2D;
+  grid-area: sidebar;
 }
 
 .children {
-  grid-area: children;
-
   padding: 55px 34px;
+
+  background-color: #F8F8F8;
+  grid-area: children;
 }
 
 .header {
+  position: absolute;
+  top: 34px;
+  left: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: 100%;
 
   padding: 0 30px;
 }
 
 .title {
   margin-bottom: 0;
+
+  transition: .3s ease-in;
 
   color: #FFFFFF;
 
@@ -57,7 +107,11 @@
 }
 
 .menuList {
-  margin-top: 50px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+
+  width: 100%;
   margin-bottom: 0;
   padding: 0 15px;
 
@@ -79,9 +133,6 @@
 
   border-radius: 12px;
   gap: 9px;
-
-  &:hover {
-  }
 
   &:hover {
     text-decoration: none;

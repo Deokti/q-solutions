@@ -1,9 +1,11 @@
 import { Link } from "atomic-router-react";
 import cx from "classnames";
+import { useUnit } from "effector-react";
 import { ReactNode } from "react";
 
 import IconArrowMenu from "@/shared/assets/arrow-menu.svg?react";
 import { MENU } from "@/shared/layouts/main-layout/model/constants.tsx";
+import { $isClosedMenu, handleClosedMenu } from "@/shared/layouts/main-layout/model/menu.ts";
 import { SButton } from "@/shared/ui/s-button";
 
 import s from "./main-layout.module.scss";
@@ -15,13 +17,21 @@ interface MainLayoutProps {
 
 export const MainLayout = (props: MainLayoutProps) => {
   const { className, children } = props;
+  const [isClosedMenu, handleOpenMenu] = useUnit([$isClosedMenu, handleClosedMenu]);
+
+  const mods = {
+    [s.closedMenu]: isClosedMenu,
+  };
 
   return (
-    <div className={cx(s.root, className)}>
+    <div className={cx(s.root, className, mods)}>
       <div className={s.sidebar}>
         <header className={s.header}>
           <h1 className={s.title}>{"QSolutions"}</h1>
-          <SButton className={s.button}>
+          <SButton
+            className={s.button}
+            onClick={handleOpenMenu}
+          >
             <IconArrowMenu />
           </SButton>
         </header>
