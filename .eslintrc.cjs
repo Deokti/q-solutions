@@ -23,14 +23,15 @@ module.exports = {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
-    "i18next/no-literal-string": [
-      "error",
-      {
-        markupOnly: true,
-        ignoreAttribute: ["to", "onClick", "name", "alt", "language"],
-      },
-    ],
-    "max-len": ["error", { ignoreComments: true, code: 100 }],
+    "i18next/no-literal-string": "off",
+    // "i18next/no-literal-string": [
+    //   "error",
+    //   {
+    //     markupOnly: true,
+    //     ignoreAttribute: ["to", "onClick", "name", "alt", "language"],
+    //   },
+    // ],
+    // "max-len": ["error", { ignoreComments: true, code: 100 }],
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "react-hooks/rules-of-hooks": "error",
