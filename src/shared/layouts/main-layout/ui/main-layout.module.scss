@@ -1,0 +1,91 @@
+.root {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1.5fr 1fr;
+  grid-template-rows: 0.1fr 2fr 1fr;
+  gap: 0 0;
+  grid-template-areas:
+    "sidebar children children"
+    "sidebar children children"
+    "sidebar children children";
+}
+
+.sidebar {
+  position: fixed;
+  grid-area: sidebar;
+
+  min-width: var(--sidebar-width);
+  height: 100%;
+
+  padding: 24px 0;
+
+  background-color: #181F2D;
+}
+
+.children {
+  grid-area: children;
+
+  padding: 55px 34px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+}
+
+.title {
+  margin-bottom: 0;
+
+  color: #FFFFFF;
+
+  font-family: "Roboto Slab Variable", sans-serif;
+  font-size: 29px;
+}
+
+.button {
+  svg path {
+    transition: all .2s ease-in;
+  }
+
+  &:hover {
+    svg path {
+      stroke: #8794a9;
+    }
+  }
+}
+
+.menuList {
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0 15px;
+
+  list-style: none;
+}
+
+.menuItem {
+  cursor: pointer;
+}
+
+.menuLink {
+  display: flex;
+
+  padding: 15px;
+
+  transition: all .2s ease-in;
+
+  color: #FFFFFF;
+
+  border-radius: 12px;
+  gap: 9px;
+
+  &:hover {
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    background-color: #222B3D;
+  }
+}

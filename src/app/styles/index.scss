@@ -1,0 +1,13 @@
+@import "reset";
+@import "./variables/global";
+
+body {
+  font-family: 'Open Sans Variable', sans-serif;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #F8F8F8;
+}

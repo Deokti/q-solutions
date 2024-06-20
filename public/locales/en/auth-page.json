@@ -1,0 +1,28 @@
+{
+  "sign-in-page": {
+    "title": "Sign In",
+    "subtitle": "Start your 30-day free trial.",
+    "input-placeholder": "Enter your email",
+    "get-started": "Get started",
+    "get-stated-with-google": "Sign up with Google"
+  },
+  "sign-in-page-successful": {
+    "title": "Check your email",
+    "subtitle": "We sent a login link to",
+    "back-to-log-in": "Back to log in"
+  },
+  "sign-in-page-error": {
+    "title": "Some error happened",
+    "subtitle": "With description (error with server)",
+    "try-again": "Try again"
+  },
+  "errors": {
+    "InvalidEmail": "Must be a valid email"
+  },
+  "finally": {
+    "successful-title": "Sign In Successful",
+    "successful-subtitle": "Your credentials have been verified. Welcome back!",
+    "error-title": "Sign In Failed",
+    "error-subtitle": "We encountered as issue validating your sign-in link. Please ensure the link hasn't expired or been used before"
+  }
+}
