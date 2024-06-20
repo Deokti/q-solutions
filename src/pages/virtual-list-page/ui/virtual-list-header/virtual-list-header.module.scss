@@ -22,3 +22,9 @@
 .button {
   margin-top: 4px;
 }
+
+@media screen and (width <= 575px) {
+  .title {
+    font-size: 25px;
+  }
+}

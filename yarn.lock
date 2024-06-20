@@ -3949,6 +3949,11 @@ graphemer@^1.4.0:
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
+hamburger-react@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/hamburger-react/-/hamburger-react-2.5.1.tgz#a15973cacabbc414f490ab0aa13340e260fc6ec1"
+  integrity sha512-XlTIinYeYzLu76q4Vd9olwOJP0hFgAeZfJFX6tTT/ufTLhmOjI77CGFYIwGc6gcDeeT86660ZoKx3/L67vdZEw==
+
 harmony-reflect@^1.4.6:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/harmony-reflect/-/harmony-reflect-1.6.2.tgz#31ecbd32e648a34d030d86adb67d4d47547fe710"

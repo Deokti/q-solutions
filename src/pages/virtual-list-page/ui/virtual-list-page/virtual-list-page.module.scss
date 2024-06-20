@@ -58,3 +58,9 @@
     background-color: #568CF9;
   }
 }
+
+@media screen and (width <= 575px) {
+  .tabs {
+    margin-top: 50px;
+  }
+}

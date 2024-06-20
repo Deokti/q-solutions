@@ -12,6 +12,12 @@
     "sidebar children children";
 }
 
+.hamburger {
+  pointer-events: none;
+
+  opacity: 0;
+}
+
 .closedMenu {
   grid-template-columns: var(--sidebar-width-closed) 1.5fr 1fr;
 
@@ -138,5 +144,83 @@
     text-decoration: none;
 
     background-color: #222B3D;
+  }
+}
+
+@media screen and (width <= 820px) {
+  .root {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr;
+    gap: 0 0;
+
+    transition: .2s ease-in;
+
+    grid-template-areas:
+    "sidebar sidebar sidebar"
+    "children children children"
+    "children children children";
+  }
+
+  .hamburger {
+    pointer-events: all;
+
+    opacity: 1;
+  }
+
+  .sidebar {
+    z-index: 10;
+
+    width: 100%;
+    height: 80px;
+  }
+
+  .header {
+    top: 18px;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .hamburger {
+    position: absolute;
+    z-index: 10;
+    top: 18px;
+    right: 22px;
+  }
+
+  .menuList {
+    pointer-events: none;
+
+    opacity: 0;
+  }
+
+  .children {
+    padding-top: 45px;
+  }
+
+  .activeMenu {
+    .menuList {
+      pointer-events: none;
+
+      opacity: 0;
+    }
+
+    .sidebar {
+      height: 100%;
+    }
+
+    .menuList {
+      pointer-events: all;
+
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (width <= 425px) {
+  .children {
+    padding: 30px 15px;
   }
 }
