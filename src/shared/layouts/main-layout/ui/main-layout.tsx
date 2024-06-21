@@ -60,6 +60,7 @@ export const MainLayout = (props: MainLayoutProps) => {
             return (
               <li
                 className={s.menuItem}
+                title={isClosedMenu ? name : ""}
                 key={id}
                 onClick={handleHamburgerActivate}
               >

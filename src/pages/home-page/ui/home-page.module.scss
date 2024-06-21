@@ -1,13 +1,9 @@
 .root {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: var(--sidebar-width);
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  height: 100%;
 }
 
 .inner {
