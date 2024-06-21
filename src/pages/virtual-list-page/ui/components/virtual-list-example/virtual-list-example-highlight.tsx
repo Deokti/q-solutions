@@ -16,7 +16,7 @@ export const VirtualListExample = () => {
   });
 
   return (
-    <div className={s.root}>
+    <div>
       <h3 className={s.text}>Всего элементов: {ARRAY_EXAMPLE.length}</h3>
       <h3 className={s.text}>Отображаемых в DOM-дереве: {virtualizedList.length}</h3>
 

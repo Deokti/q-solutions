@@ -1,6 +1,27 @@
-import { CSSProperties, useLayoutEffect, useMemo, useRef, useState } from "react";
+import Highlight from "react-highlight";
 
-// Интерфейс для пропсов компонента VirtualizedList
+import s from "./virtual-list-code.module.scss";
+
+export const VirtualListCode = () => {
+  let elementHeight;
+  let i;
+
+  return (
+    <div className={s.root}>
+      <p className={s.text}>
+        Исходный код:{" "}
+        <a
+          target={"_blank"}
+          href="https://github.com/Deokti/q-solutions/blob/master/src/shared/lib/hooks/useVirtualizedList.tsx"
+        >
+          useVirtualizedList
+        </a>
+      </p>
+
+      <div className={s.container}>
+        <div className={s.list}>
+          <Highlight>
+            {`// Интерфейс для пропсов компонента VirtualizedList
 interface VirtualizedListProps<T> {
   data: T[]; // массив данных для отображения в списке
   elementHeight: number; // высота каждого элемента списка
@@ -67,7 +88,7 @@ export const useVirtualizedList = <T = unknown,>(config: VirtualizedListProps<T>
           left: 0,
           width: "100%",
           height: elementHeight,
-          transform: `translateY(${i * elementHeight}px)`,
+          transform: \`translateY(${i * elementHeight}px)\`,
         },
       });
     }
@@ -92,4 +113,11 @@ export const useVirtualizedList = <T = unknown,>(config: VirtualizedListProps<T>
     // Возвращаем массив виртуализированных элементов
     virtualizedList,
   };
+};
+`}
+          </Highlight>
+        </div>
+      </div>
+    </div>
+  );
 };
