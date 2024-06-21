@@ -3,8 +3,8 @@ import Highlight from "react-highlight";
 import s from "./virtual-list-code.module.scss";
 
 export const VirtualListCode = () => {
-  let elementHeight;
-  let i;
+  const elementHeight = 0;
+  const i = 0;
 
   return (
     <div className={s.root}>
